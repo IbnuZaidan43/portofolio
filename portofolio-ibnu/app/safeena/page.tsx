@@ -1,4 +1,4 @@
-export default function Himasela() {
+export default function Safeena() {
     <main className="bg-dark">
         
     </main>

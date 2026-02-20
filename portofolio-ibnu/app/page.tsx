@@ -22,9 +22,24 @@ export default function Home() {
   ];
 
   const project = [
-    { id: 1, foto: "/projectProfile/nexus.png", objective: "/nexus"},
-    { id: 2, foto: "/projectProfile/himasela.png", objective: "/himasela"}
+    { id: 1, foto: "/projectProfile/nexus.png", objective: "/nexus", title: "Nexus Financial App", position: "fullstack developer"},
+    { id: 2, foto: "/projectProfile/himasela.png", objective: "/himasela", title: "Organization Website HIMASELA", position: "fullstack developer"},
+    { id: 3, foto: "/projectProfile/safeena.png", objective: "/safeena", title: "Company Profile Webiste", position: "frontend developer"}
   ]
+
+  const positionColor = (posisi: string) => {
+    if(posisi === "fullstack developer"){
+      return "bg-[#09C25B]/70"
+    }
+    else if(posisi === "frontend developer") {
+      return "bg-[#FFE501]/70"
+    }
+    else if(posisi === "backend developer") {
+      return "bg-[#272F7A]/70"
+    }
+
+    return "bg-[#4E4F51]"
+  }
 
   return (
     <main className="bg-dark">
@@ -87,18 +102,20 @@ export default function Home() {
 
       <div className="py-8 px-12">
         <span className="text-[48px] font-semibold">Featured Project</span>
-        <div className="flex flex-wrap gap-8">
+        <div className="flex flex-wrap justify-between">
           {project.map((item) => (
-            <a key={item.id} href={item.objective}>
+            <a key={item.id} href={item.objective} target="_blank">
               {/* div buat background abu gitu */}
-              <div className="">
+              <div className="bg-[#4E4F51] w-[570px] h-fit rounded-2xl" >
                 {/* div buat image */}
                 <div>
                   <Image
-                    width={128} height={128}
+                    width={512} height={300}
                     src={item.foto} alt="project"
+                    className="rounded-2xl"
                   />
                 </div>
+                <span className={"text-[20px] text-white/90 font-semibold my-4 mx-4 py-2 px-4 inline-block rounded-full " + positionColor(item.position)}>{item.position}</span>
               </div>
             </a>
           ))}
