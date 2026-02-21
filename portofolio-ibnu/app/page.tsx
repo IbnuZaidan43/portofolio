@@ -100,13 +100,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="py-8 px-12">
-        <span className="text-[48px] font-semibold">Featured Project</span>
+      <div className="flex flex-col py-8 px-12">
+        <span className="text-[48px] font-semibold pb-4">Featured Project</span>
         <div className="flex flex-wrap justify-between">
           {project.map((item) => (
             <a key={item.id} href={item.objective} target="_blank">
               {/* div buat background abu gitu */}
-              <div className="bg-[#4E4F51] w-[570px] h-fit rounded-2xl" >
+              <div className="bg-[#4E4F51] w-[570px] h-fit rounded-2xl flex flex-col" >
                 {/* div buat image */}
                 <div>
                   <Image
@@ -115,7 +115,8 @@ export default function Home() {
                     className="rounded-2xl"
                   />
                 </div>
-                <span className={"text-[20px] text-white/90 font-semibold my-4 mx-4 py-2 px-4 inline-block rounded-full " + positionColor(item.position)}>{item.position}</span>
+                <span className={"w-fit text-[16px] text-white/90 font-semibold mt-4 mx-4 py-2 px-4 inline-block rounded-full " + positionColor(item.position)}>{item.position}</span>
+                <span className="text-[28px] text-white font-bold py-2 px-4">{item.title}</span>
               </div>
             </a>
           ))}
