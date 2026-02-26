@@ -29,7 +29,7 @@ export default function Nexus() {
                         </div>
                         <div className="flex flex-col gap-4 md:gap-2 p-8 justify-center">
                             <span className="text-[20px] md:text-[28px] lg:text-[32px] xl:text-[42px] text-center md:text-start font-bold leading-none">Native-App for financial Managemment</span>
-                            <p className="text-[16px] lg:text-[20px] xl:text-[28px] text-justify leading-none">A company profile website that prioritizes access to information to expand market reach. Integrating interactive visual elements with structured information, it ensures the effective presentation of service data and company objectives. It features a registration form that automatically sends to the company email address.</p>
+                            <p className="text-[16px] lg:text-[20px] xl:text-[28px] text-justify leading-none">A native financial management website designed for efficient cash flow tracking. It features Excel import and export integration to facilitate simultaneous data movement and accurate financial reporting.</p>
                         </div>
                     </div>
                     <div className="flex flex-wrap justify-center gap-y-1 md:gap-y-2">
